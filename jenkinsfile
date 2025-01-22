@@ -24,6 +24,7 @@ pipeline {
             steps{
                 echo " Deploying the application"
                 sh "cp target/simple-java-app-1.0-SNAPSHOT.jar /home/ec2-user/opt/deployments/simple-java-app.jar" 
+                sh 'java -jar /home/ec2-user/opt/deployments/simple-java-app.jar >> /home/ec2-user/opt/deployments/output.txt
             }
         }
         
